@@ -43,6 +43,7 @@ def preprocess(words_file = "../tools/word_data.pkl", authors_file="../tools/ema
 
 
 
+
     ### text vectorization--go from strings to lists of numbers
     vectorizer = TfidfVectorizer(sublinear_tf=True, max_df=0.5,
                                  stop_words='english')

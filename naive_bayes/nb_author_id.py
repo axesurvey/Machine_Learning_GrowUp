@@ -12,6 +12,7 @@
     
 import sys
 import numpy
+import scipy
 from time import time
 sys.path.append("../tools/")
 from email_preprocess import preprocess
@@ -37,10 +38,10 @@ clf.fit(features_train, labels_train)
 print "training time:", round(time()-t0, 3), "s"
 
 labels_predict = clf.predict(features_test)
-accuracy_score(labels_predict,labels_test)
+acc = accuracy_score(labels_predict,labels_test)
 
 ### print out accuracy
-print "Accuracy of Naive Bayes algrorithm for email author classification:", accuracy_score
+print "Accuracy of Naive Bayes algrorithm for email author classification:", acc
 #########################################################
 
 
